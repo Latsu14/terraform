@@ -29,8 +29,3 @@ module "ec2_instance" {
     Environment = "dev"
   }
 }
-
-module "s3_bucket" {
-  source      = "./modules/s3"
-  bucket_name = "ragaca12345"
-}
