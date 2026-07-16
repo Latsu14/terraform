@@ -17,15 +17,3 @@ module "vpc" {
   }
 }
 
-module "ec2_instance" {
-  source = "terraform-aws-modules/ec2-instance/aws"
-
-  name      = "single-instance"
-  ami       = "ami-028acd58719b05107"
-  subnet_id = "subnet-0663095636a751618"
-
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-}
